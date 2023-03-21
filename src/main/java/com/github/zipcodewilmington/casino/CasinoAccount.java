@@ -6,4 +6,21 @@ package com.github.zipcodewilmington.casino;
  * The `ArcadeAccount` is used to log into the system to select a `Game` to play.
  */
 public class CasinoAccount {
+    // constructor??
+
+    /** variables:
+     * account name, password, balance
+     *
+     * methods:
+     * getName
+     * setName
+     * getBalance
+     * setBalance
+     * getPassword
+     * setPassword
+     * ^^ I think these variables move to CasinoAccountManager??
+     *
+     *
+     */
+
 }

@@ -5,7 +5,7 @@ package com.github.zipcodewilmington.casino;
  * `ArcadeAccountManager` stores, manages, and retrieves `ArcadeAccount` objects
  * it is advised that every instruction in this class is logged
  */
-public class CasinoAccountManager {
+public class CasinoAccountManager extends CasinoAccount{
     /**
      * @param accountName     name of account to be returned
      * @param accountPassword password of account to be returned
