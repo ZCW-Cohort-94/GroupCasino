@@ -1,4 +1,4 @@
 package com.github.zipcodewilmington.gamesTest;
 
-public class blackjackTest {
+public class NumberguessTest {
 }
