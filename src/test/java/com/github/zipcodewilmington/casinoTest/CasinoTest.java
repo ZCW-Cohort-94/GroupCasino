@@ -5,7 +5,7 @@ import com.github.zipcodewilmington.casino.CasinoAccountManager;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestCasino {
+public class CasinoTest {
     @Test
     public void testConstructor(){
         // Given

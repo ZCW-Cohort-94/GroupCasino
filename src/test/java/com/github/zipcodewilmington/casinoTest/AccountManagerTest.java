@@ -2,7 +2,7 @@ package com.github.zipcodewilmington.casinoTest;
 
 import org.junit.Test;
 
-public class TestAccountManager {
+public class AccountManagerTest {
     @Test
     public void testCreateAccount(){
         // Given
