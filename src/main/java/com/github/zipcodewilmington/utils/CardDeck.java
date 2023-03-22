@@ -1,2 +1,4 @@
-package com.github.zipcodewilmington.utils;public class CardDeck {
+package com.github.zipcodewilmington.utils;
+
+public class CardDeck {
 }
