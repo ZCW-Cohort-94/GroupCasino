@@ -7,16 +7,20 @@ public class Card {
     private Number rank;
 
 
-    public Card(Number rank, Suits suit){
+    public Card(Suits suit, Number rank){
         this.rank = rank;
         this.suit = suit;
     }
 
-    public String getSuit(){
-        return suit.printSuit();
+    public int getValue(){
+        return rank.rankValue;
     }
 
-    public int getRank(){
-        return rank.getRank();
+    public Suits getSuit(){
+        return suit;
+    }
+
+    public Number getRank(){
+        return rank;
     }
 }
