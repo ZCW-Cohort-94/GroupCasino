@@ -1,6 +1,6 @@
 package com.github.zipcodewilmington;
 
-public class Login  {
+public class Login {
     /**
      * Login is CasinoAccountManager
      *
