@@ -16,6 +16,14 @@ public class CasinoAccountManager extends CasinoAccount{
         getAllAccounts();
     }
 
+    public HashMap<String, CasinoAccount> getAccountMap() {
+        return accountMap;
+    }
+
+    public void setAccountMap(HashMap<String, CasinoAccount> accountMap) {
+        this.accountMap = accountMap;
+    }
+
     public void getAllAccounts(){
         BufferedReader bufferedReader;
         try{
