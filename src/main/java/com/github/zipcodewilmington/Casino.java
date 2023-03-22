@@ -197,9 +197,12 @@ public class Casino implements Runnable {
             // if name not already in DB
             if(!accountManager.checkAccountName(accountName)){
                 errorConsole.println("Account name is not recognized!");
-                String createAcc = console.getStringInput("Do you want to create a new account? (Y|N)");
-                if(createAcc.equals("Y")){
+                String createAcc = console.getStringInput("Do you want to create a new account? (Y | N | retry) : ");
+                if(createAcc.equalsIgnoreCase("Y")){
                     createNewAccount();
+                    return;
+                } else if(createAcc.equalsIgnoreCase("N")){
+                    successConsole.println("You are directed back to the main menu!");
                     return;
                 }
                 continue;
@@ -219,7 +222,8 @@ public class Casino implements Runnable {
     private void showBalance(){
         boolean isInBalanceMenu = true;
         while(isInBalanceMenu){
-            successConsole.println("Your current balance is %.2f ",currentAccount.getBalance());
+            System.out.println(currentAccount.getBalance());
+            successConsole.println("Your current balance is %f ",currentAccount.getBalance());
             Integer option = balanceMenu();
             switch (option){
                 case 1:
