@@ -280,7 +280,11 @@ public class Casino implements Runnable {
             Integer option = gameMenu();
             switch (option){
                 case 1: //slots game
-                    play(new SlotsGame(), new SlotsPlayer(currentAccount));
+                    try {
+                        play(new SlotsGame(), new SlotsPlayer(currentAccount));
+                    } catch (InterruptedException e) {
+                        //throw new RuntimeException(e);
+                    }
                     break;
                 case 2:
                     break;
@@ -317,10 +321,10 @@ public class Casino implements Runnable {
                 .append("SELECT A NUMBER: ")
                 .toString());
     }
-    private void play(Object gameObject, Object playerObject) {
+    private void play(Object gameObject, Object playerObject) throws InterruptedException {
         Game game = (Game) gameObject;
         Player player = (Player) playerObject;
-        // game.add(player);
+        game.add(player);
         game.run();
     }
 }
