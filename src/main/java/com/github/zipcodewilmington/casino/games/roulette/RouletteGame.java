@@ -2,11 +2,13 @@ package com.github.zipcodewilmington.casino.games.roulette;
 
 import com.github.zipcodewilmington.WheelThing;
 import com.github.zipcodewilmington.casino.GameInterface;
-import com.github.zipcodewilmington.casino.PlayerInterface;
+import com.github.zipcodewilmington.casino.Player;
+
 
 import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
+
 import java.util.Scanner;
 
 public class RouletteGame implements GameInterface {
@@ -140,12 +142,12 @@ public class RouletteGame implements GameInterface {
     }
 
     @Override
-    public void add(PlayerInterface player) {
+    public void add(Player player) {
 
     }
 
     @Override
-    public void remove(PlayerInterface player) {
+    public void remove(Player player) {
 
     }
 
