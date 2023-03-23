@@ -1,9 +1,6 @@
 package com.github.zipcodewilmington;
 
-import com.github.zipcodewilmington.casino.CasinoAccount;
-import com.github.zipcodewilmington.casino.CasinoAccountManager;
-import com.github.zipcodewilmington.casino.GameInterface;
-import com.github.zipcodewilmington.casino.Player;
+import com.github.zipcodewilmington.casino.*;
 import com.github.zipcodewilmington.casino.games.slots.SlotsGame;
 import com.github.zipcodewilmington.casino.games.slots.SlotsPlayer;
 import com.github.zipcodewilmington.utils.AnsiColor;
@@ -283,7 +280,7 @@ public class Casino implements Runnable {
             Integer option = gameMenu();
             switch (option){
                 case 1: //slots game
-                    //play(new SlotsGame(), new SlotsPlayer());
+                    play(new SlotsGame(), new SlotsPlayer(currentAccount));
                     break;
                 case 2:
                     break;
@@ -321,9 +318,9 @@ public class Casino implements Runnable {
                 .toString());
     }
     private void play(Object gameObject, Object playerObject) {
-        GameInterface game = (GameInterface)gameObject;
+        Game game = (Game) gameObject;
         Player player = (Player) playerObject;
-        game.add(player);
+       // game.add(player);
         game.run();
-    }
+    }️
 }

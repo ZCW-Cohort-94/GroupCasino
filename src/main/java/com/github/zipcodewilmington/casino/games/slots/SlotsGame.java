@@ -45,6 +45,5 @@ public class SlotsGame {
     }
     public void run() throws InterruptedException {
         String pullSlot = pullSlots();
-
     }
 }
