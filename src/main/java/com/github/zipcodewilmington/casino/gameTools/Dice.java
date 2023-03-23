@@ -14,8 +14,8 @@ public class Dice {
     public Dice(int numberDice) {
         this.numberDice = numberDice;
     }
-    public void setNumberDice(int x) {
-        numberDice = x;
+    public void setNumberDice(int numberDice) {
+        this.numberDice = numberDice;
     }
     public int getNumberDice() {
         return numberDice;
