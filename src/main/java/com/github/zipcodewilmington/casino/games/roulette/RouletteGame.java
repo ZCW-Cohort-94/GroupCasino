@@ -1,12 +1,14 @@
 package com.github.zipcodewilmington.casino.games.roulette;
 
 import com.github.zipcodewilmington.WheelThing;
-import com.github.zipcodewilmington.casino.GameInterface;
+import com.github.zipcodewilmington.casino.Game;
 import com.github.zipcodewilmington.casino.Player;
 
 import java.util.Scanner;
 
-public class RouletteGame implements GameInterface {
+public class RouletteGame extends Game {
+    private RoulettePlayer currentPlayer;
+
     public static void Roulette() {
         WheelThing wheel = new WheelThing(); //created wheel object to stimulate roulette wheel
         int balance = 0;
@@ -98,8 +100,14 @@ public class RouletteGame implements GameInterface {
     }
 
     @Override
-    public void add(Player player) {
+    public Player add(Player player) {
+        this.currentPlayer = (RoulettePlayer) player;
+        return this.currentPlayer;
+    }
 
+    @Override
+    public Player removePlayer(Player player) {
+        return null;
     }
 
     @Override
