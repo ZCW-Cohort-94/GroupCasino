@@ -38,12 +38,8 @@ public class SlotsGame extends Game {
             z = outcome[g];
             z1 = outcome[h];
             z2 = outcome[j];
-            System.out.printf("[  " + "  %s  " + "  :  " + "  %s  " + "  :  " + "  %s  " +   "]\r\n", x,y,z);
-            Thread.sleep(600);
-            System.out.printf("[  " + "  %s  " + "  :  " + "  %s  " + "  :  " + "  %s  " +   "]\r", x1,y1,z1);
-            Thread.sleep(600);
-            System.out.printf("[  " + "  %s  " + "  :  " + "  %s  " + "  :  " + "  %s  " +   "]\r", x2, y2, z2);
-            Thread.sleep(600);
+            System.out.printf("[  " + "  %s  " + "  :  " + "  %s  " + "  :  " + "  %s  " +   "]\r", x,y,z);
+            Thread.sleep(120);
         }
         return null;
     }
