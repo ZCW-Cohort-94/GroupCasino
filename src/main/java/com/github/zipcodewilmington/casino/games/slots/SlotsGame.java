@@ -1,10 +1,14 @@
 package com.github.zipcodewilmington.casino.games.slots;
+import com.github.zipcodewilmington.casino.Game;
+import com.github.zipcodewilmington.casino.Player;
+
 import java.util.Random;
 
 /**
  * Created by leon on 7/21/2020.
  */
-public class SlotsGame {
+public class SlotsGame extends Game {
+    Player currentPlayer;
     private final String[] outcome = {"ZCW", "Bar", "cherry", "7", "coal", "bunny", "$"};
     int a, b, c, d, e, f, g, h, j;
     String x,x1, x2, y, y1, y2, z, z1, z2;
@@ -43,8 +47,29 @@ public class SlotsGame {
         }
         return null;
     }
-    public void run() throws InterruptedException {
-        String pullSlot = pullSlots();
 
+    @Override
+    public void remove(Player player) {
+
+    }
+
+    public void run() {
+        try{
+            String pullSlot = pullSlots();
+
+        } catch (InterruptedException ex) {
+            //throw new RuntimeException(ex);
+        }
+    }
+
+    @Override
+    public Player add(Player player) {
+        this.currentPlayer = player;
+        return currentPlayer;
+    }
+
+    @Override
+    public Player removePlayer(Player player) {
+        return null;
     }
 }

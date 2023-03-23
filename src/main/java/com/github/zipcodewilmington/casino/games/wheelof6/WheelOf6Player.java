@@ -28,4 +28,19 @@ public class WheelOf6Player extends Player implements GamblingPlayer {
     protected Double startGame() {
         return null;
     }
+
+    @Override
+    public void makeBet() {
+
+    }
+
+    @Override
+    public void checkBet() {
+
+    }
+
+    @Override
+    public boolean bettable() {
+        return false;
+    }
 }
